@@ -1,0 +1,375 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+     
+}
+
+/*-------------------------------------------------- Estilos para el menu de navegacion------------------------------------------------------------------- */
+
+.content {
+    max-width: 100%; 
+    margin: 0 auto;
+    
+}
+
+.menu-content {
+    min-height: 80px;
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(2, 104, 31));
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: fixed;   /* Lo despega del flujo y lo fija a la pantalla */
+    top: 0;            /* Lo pega al techo */
+    width: 100%;       /* Obligatorio para que ocupe todo el ancho al ser fixed */
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none; /* Quita los puntos de la lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Alinea los items en horizontal */
+}
+
+.navbar ul li {
+    position: relative;
+}
+
+.navbar ul li a {
+    font-size: 17px; /* Un poco más grande para que sea leible */
+    padding: 15px 20px;
+    color: black;
+    display: block;
+    font-weight: bold;
+    text-decoration: none; /* Quita el subrayado azul */
+}
+
+.navbar ul li a:hover { 
+    color: white;
+}
+
+.menu-icon {
+    width: 40px;
+    cursor: pointer;
+    display: none; /* Se oculta en PC para que no estorbe */
+}
+
+#menu {
+    display: none; /* Siempre oculto, es solo un activador */
+}
+
+
+/*-------------------------------------------------- Estilos para el contenedor principal foto y tutulo h1------------------------------------------------------------------- */
+
+.container{
+
+    background-image:linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0, 0, 0, 0.1)), url(../imagenes/adn_glowgen_portada.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;   
+    background-size: cover;
+    color: black;
+    padding: 100px;
+    font-size: 40px;
+}
+
+.h1-container{
+
+   text-align: center;
+   font-size: 25px; 
+
+}
+
+.button-container{
+   
+   text-align: center;
+   margin-top: 45px;
+   font-weight: 700;
+   
+    }
+  
+button {
+  
+  background-color:gray;
+  color: white;
+  padding: 17px 25px;
+  border: none;
+  border-radius: 50px; 
+  cursor: pointer;
+  
+  
+}
+
+.parrafo-container{
+    text-align: left;
+    font-size: 24px;
+    font-weight: 550;
+    margin-top: 80px;
+}
+
+/*-------------------------------------------------- Estilos para el pie de pagina h2 e imagenes------------------------------------------------------------------- */
+
+.h2-container{
+    text-align: center;
+    font-size: 18px;
+    margin-right: 40px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    color:  rgb(2, 104, 31)
+    
+}
+
+.imagen-container{
+    display: flex;       /* Las pone una al lado de la otra */
+    gap: 30px;           /* Espacio entre las imágenes */
+    justify-content: center; /* Las centra */
+    flex-wrap: wrap;     /* Si no caben (en móvil), se ponen una abajo de la otra */
+    margin-bottom: 20px;
+}
+
+.galeria-servicios img {
+    width: 500px;        /* Ancho fijo para todas */
+    height: 500px;       /* Altura fija para todas (puedes cambiarla a tu gusto) */
+    object-fit: cover;   
+    border-radius: 15px; /* Bordes redondeados para que se vean más estéticas */
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.1); /* Sombrita suave */
+}
+
+.galeria-servicios img:hover {
+    transform: scale(1.2); /* Se agranda apenas un poquito */
+    transition: 0.3s;       /* Movimiento suave */
+    
+}
+
+.seccion-mixta {
+    display: flex; 
+    align-items: center;  /* Centra el texto verticalmente con la imagen */
+    gap: 50px;            /* Espacio de separación entre texto e imagen */
+    padding: 40px;        /* Espacio interno para que no toque los bordes */
+    margin-bottom: 50px; 
+    line-height: 1.6;    
+    text-align: left;    
+    font-size: 18px;     
+}
+
+.texto-columna {
+    flex: 1.5;            /* Le da un poco más de espacio al texto que a la imagen */
+}
+
+.imagen-columna {
+    flex: 0.4;              /* La imagen ocupa un poco menos */
+    display: flex;
+    justify-content: center;
+}
+.imagen-columna img {
+    width: auto;         /* Que no se obligue a ocupar el 100% */
+    max-width: 100%;     /* Pero que no se salga de su caja */
+    height: auto;        /* Mantiene la proporción original */
+}
+
+.banner-destacado {
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(2, 104, 31));
+    color: black;
+    padding: 30px;
+    text-align: center;
+    
+  
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/*-------------------------------------------------------------whatsapp------------------------------------------------*/
+
+.whatsapp-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 9999;
+}
+
+.whatsapp-button img {
+  width: 100px;
+  height: 100px;
+  
+}
+
+.whatsapp-button img:hover {
+
+    transform: translateY(-5px); /* Pequeño salto al pasar el mouse */
+    transition: transform 0.3s ease; /* Transición suave para el efecto hover */
+}
+
+.whatsapp-tooltip {
+  background: #25D366;
+  color: black;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/*-------------------------------------------------------------footer------------------------------------------------*/
+
+.footer-container {
+    background-color: #f9f9f9; /* Color de fondo claro y limpio */
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;    /* Elementos uno abajo del otro */
+    align-items: center;       /* Centra todo horizontalmente */
+    gap: 20px;                 /* Espacio entre las redes y el copyright */
+    border-top: 1px solid #ddd; /* Una línea sutil divisoria arriba */
+    margin-top: 50px;
+}
+
+.redes-sociales {
+    text-align: center;
+}
+
+.redes-sociales p {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.instagram-icon img {
+    width: 40px;               /* Tamaño del icono de Instagram */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.instagram-icon img:hover {
+    transform: translateY(-5px); /* Pequeño salto al pasar el mouse */
+}
+
+.copyright {
+    border-top: 1px solid #eee; /* Línea interna */
+    padding-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.copyright p {
+    font-size: 14px;
+    color: #777;
+    letter-spacing: 1px;
+}
+
+/*---------------------------------------------------ESTUDIOS------------------------------------------------*/
+
+
+.estudios-bg {
+    background-image: none; /* esconde la foto de adn de la home  ADN */
+    background-color: white; 
+    color: black; 
+    
+}
+
+
+/* ---------------------------------------------------------------- Ajuste para Celular (Media Query) ------------------------------------------------------ */
+
+@media (max-width: 991px) {
+    
+    .menu-icon {
+        display: block; /* Solo aparece en pantallas pequeñas */
+    }
+
+    .navbar {
+        position: absolute;
+        top: 80px; /* Ajustado a la altura de tu menu-content */
+        left: 0;
+        right: 0;
+        background-color: white; /* Color sólido para que se lean los links */
+        background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(2, 104, 31));
+        display: none; /* Empieza escondido */
+        z-index: 1000;
+    }
+
+    .navbar ul {
+        flex-direction: column; /* Links uno debajo de otro */
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    #menu:checked ~ .navbar {
+        display: block;
+    }
+   
+    .galeria-servicios {
+        flex-direction: column; /* Las pone una abajo de la otra */
+        align-items: center;    /* Las centra */
+    }
+
+    .galeria-servicios img {  
+        height: auto;    /* Para que no se vean estiradas en móvil */
+        transform: none !important; /* Prohíbe que se agranden */
+        margin-top: 10px; 
+        margin-left: 5px;
+    }
+
+    .galeria-servicios img:hover {
+        transform: none !important; /* Elimina el efecto de agrandar al tocar */
+    }
+
+    .seccion-mixta {
+        flex-direction: column; /* Cambia de fila a columna: el texto queda arriba y la imagen abajo */
+        padding: 20px;          /* Reducimos el padding para que entre mejor en la pantalla */
+        gap: 20px;              /* Achicamos el espacio entre texto e imagen */
+        text-align: center;     /* Opcional: centra el texto para que se vea mejor en móviles */
+    }
+
+    .texto-columna, .imagen-columna {
+        flex: none;             /* Quitamos las proporciones fijas */
+        width: 100%;            /* Hacemos que ocupen todo el ancho disponible */
+    }
+
+    .imagen-columna img {
+        max-width: 80%;         /* Ajustamos el tamaño de la imagen para que no quede gigante en el cel */
+        margin: 0 auto;         /* La centramos */
+    }
+
+.h1-container{
+
+   text-align: center;
+   font-size: 18px; 
+
+}
+
+    .footer-container {
+        padding: 30px 10px;
+    }
+}
+
+.whatsapp-flotante {
+    position: fixed; /* Esto lo hace flotar y quedarse en su lugar */
+    bottom: 20px;    /* A 20px del borde inferior de la pantalla */
+    right: 20px;     /* A 20px del borde derecho de la pantalla */
+    width: 60px;     /* Tamaño del botón */
+    height: 60px;    /* Tamaño del botón */
+    background-color: #25D366; 
+    border-radius: 50%; /* Lo hace redondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2); /* Una sombra suave */
+    z-index: 1000;   /* Asegura que siempre esté por encima de otros elementos */
+    transition: transform 0.3s ease; /* Transición suave para el efecto hover */
+}
+
+.whatsapp-flotante img {
+    width: 150px;     /* Tamaño del icono de WhatsApp dentro del botón */
+    height: auto;
+}
+
+.whatsapp-flotante:hover {
+    transform: scale(1.1); /* Se agranda un poco al pasar el mouse */
+}
