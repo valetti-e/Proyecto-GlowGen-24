@@ -9,6 +9,7 @@
      
 }
 
+
 /*-------------------------------------------------- Estilos para el menu de navegacion------------------------------------------------------------------- */
 
 .content {
@@ -111,6 +112,8 @@ button {
     font-weight: 550;
     margin-top: 80px;
 }
+
+
 
 /*-------------------------------------------------- Estilos para el pie de pagina h2 e imagenes------------------------------------------------------------------- */
 
@@ -274,6 +277,220 @@ button {
     
 }
 
+.video video {
+  
+  width: 100%;
+  max-width: 450px;
+  height: 650px;       
+  display: block;
+  margin: auto;
+}
+
+/*---------------------------------------------------Depilacion laser ------------------------------------------------*/
+.h1-depilacion {
+    
+    margin-top: 150px;
+    text-align: left;
+    font-size: 25px;
+    margin-top: 20px;
+    color: rgb(0, 0, 0);
+   
+   
+}
+
+/* CONTENEDOR DEL CARRUSEL */
+#carouselExampleIndicators {
+  
+    max-width: 1200px;      /* tamaño máximo */
+    margin: 75px auto;     /* centrado */
+}
+
+/* IMÁGENES DEL CARRUSEL */
+.carousel-item img {
+    height: 700px;         /* altura fija */
+    border-radius: 50px;   /* bordes redondeados */
+}
+
+#carouselExampleIndicators {
+    margin-top: 120px;
+}
+
+.seccion-estetica {
+  background: linear-gradient(135deg, #f8f8f8, #ffffff);
+  padding: 80px 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* CONTENEDOR */
+.seccion-estetica .container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px;
+
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+
+  /* 🔥 EVITA QUE SE CORTE */
+  overflow: visible;
+}
+
+/* TITULO PRINCIPAL */
+.seccion-estetica h1 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #5a8f6b;
+  font-weight: 600;
+}
+
+/* SUBTITULOS */
+.seccion-estetica h2 {
+  font-size: 24px;
+  margin-top: 35px;
+  margin-bottom: 10px;
+  color: #5a8f6b;
+}
+
+/* SUBSUBTITULOS */
+.seccion-estetica h3 {
+  font-size: 18px;
+  margin-top: 20px;
+  color: #444;
+}
+
+/* TEXTO */
+.seccion-estetica p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 12px;
+  color: #555;
+
+  /* 🔥 evita cortes raros */
+  word-break: break-word;
+  white-space: normal;
+}
+
+/* LISTAS */
+.seccion-estetica ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.seccion-estetica ul li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* DETALLE PRO (hover suave) */
+.seccion-estetica h2:hover {
+  transform: translateX(3px);
+  transition: 0.3s;
+}
+
+/*---------------------------------------------------Quienes somos------------------------------------------------*/
+
+
+
+#quienes-somos {
+  background: linear-gradient(135deg, #f8f8f8, #ffffff);
+  padding: 80px 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+#quienes-somos .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* TITULO PRINCIPAL */
+#quienes-somos h1 {
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #5a8f6b; 
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* SUBTITULOS */
+#quienes-somos h2 {
+  font-size: 26px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: #5a8f6b;
+  position: relative;
+  padding-left: 15px;
+}
+
+#quienes-somos h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 5px;
+  height: 70%;
+  background-color: #5a8f6b;
+  border-radius: 3px;
+}
+
+/* PARRAFOS */
+#quienes-somos p {
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* LISTAS */
+#quienes-somos ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+#quienes-somos ul li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+  color: #444;
+}
+
+/* bullet personalizado */
+#quienes-somos ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #5a8f6b;
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* EFECTO BLOQUE DESTACADO */
+#quienes-somos p:last-child {
+  margin-top: 25px;
+  font-weight: 500;
+  text-align: center;
+  font-size: 18px;
+  color: #5a8f6b;
+}
+
+/* HOVER SUAVE (detalle premium) */
+#quienes-somos h2:hover {
+  transform: translateX(3px);
+  transition: 0.3s ease;
+}
+
+/* SOMBRA SUAVE CONTENEDOR */
+#quienes-somos .container {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
 
 /* ---------------------------------------------------------------- Ajuste para Celular (Media Query) ------------------------------------------------------ */
 
@@ -373,3 +590,46 @@ button {
 .whatsapp-flotante:hover {
     transform: scale(1.1); /* Se agranda un poco al pasar el mouse */
 }
+.h1-depilacion {
+    
+ margin-bottom: 25px;
+    font-size: 28px;
+     
+}
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 250px;   
+        border-radius: 0 !important;
+    }
+}
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  section {
+    padding: auto 20px; 
+  }
+
+  #quienes-somos {
+    padding: 50px 15px;
+  }
+
+  #quienes-somos h1 {
+    font-size: 30px;
+  }
+
+  #quienes-somos h2 {
+    font-size: 22px;
+  }
+
+  #quienes-somos p {
+    font-size: 15px;
+  }
