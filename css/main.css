@@ -493,142 +493,272 @@ button {
 
 /* ---------------------------------------------------------------- Ajuste para Celular (Media Query) ------------------------------------------------------ */
 
-@media (max-width: 991px) {
-    
+@media (max-width: 768px) {
+
+    /* GENERAL */
+    body {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    /* HEADER */
+    .menu-content {
+        padding: 10px 15px;
+        min-height: 70px;
+    }
+
+    /* HERO / PORTADA */
+    .container {
+        padding: 60px 20px;
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .parrafo-container {
+        font-size: 16px;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .button-container button {
+        padding: 12px 18px;
+        font-size: 14px;
+    }
+
+    /* GALERÍA */
+    .imagen-container {
+        gap: 15px;
+    }
+
+    .galeria-servicios img {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    /* SECCIONES MIXTAS */
+    .seccion-mixta {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .imagen-columna img {
+        max-width: 90%;
+    }
+
+    /* TEXTO */
+    h1 {
+        font-size: 24px !important;
+    }
+
+    h2 {
+        font-size: 20px !important;
+    }
+
+    h3 {
+        font-size: 16px !important;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /* CARRUSEL */
+    .carousel-item img {
+        height: 220px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    /* WHATSAPP */
+    .whatsapp-button img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .whatsapp-tooltip {
+        font-size: 12px;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        padding: 25px 10px;
+        gap: 10px;
+    }
+
+    .redes-sociales p {
+        font-size: 18px;
+    }
+
+    .instagram-icon img {
+        width: 30px;
+    }
+}
+
+.instagram-icon img:hover {
+    transform: translateY(-5px); /
+}
+
+👉 Ese / está mal
+
+
+
+.instagram-icon img:hover {
+    transform: translateY(-5px);
+}
+
+
+.container {
+    padding: 100px;
+}
+
+
+
+.container {
+    padding: 60px 20px;
+}
+
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* ================= MENU FIX + MOBILE PRO ================= */
+
+.menu-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+/* evita que el menu tape contenido */
+body {
+    padding-top: 80px;
+}
+
+/* ================= HAMBURGUESA MODERNA ================= */
+
+.menu-icon {
+    width: 35px;
+    height: 25px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display: block;
+    height: 4px;
+    background: black;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* animación hamburguesa a X */
+#menu:checked + label .line1 {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#menu:checked + label .line2 {
+    opacity: 0;
+}
+
+#menu:checked + label .line3 {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ================= NAV MOBILE ================= */
+
+@media (max-width: 768px) {
+
     .menu-icon {
-        display: block; /
+        display: flex;
     }
 
     .navbar {
         position: absolute;
-        top: 80px; 
+        top: 80px;
         left: 0;
         right: 0;
-        background-color: white; 
-        background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(2, 104, 31));
-        display: none; 
-        z-index: 1000;
-    }
-
-    .navbar ul {
-        flex-direction: column; 
+        background: white;
+        display: none;
+        flex-direction: column;
         text-align: center;
-        padding: 20px 0;
+        padding: 15px 0;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
 
     #menu:checked ~ .navbar {
-        display: block;
+        display: flex;
     }
-   
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar ul li a {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    /* ================= IMAGENES ================= */
+
     .galeria-servicios {
-        flex-direction: column; 
-        align-items: center;    
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
-    .galeria-servicios img {  
-        height: auto;    
-        transform: none !important; 
-        margin-top: 10px; 
-        margin-left: 5px;
+    .galeria-servicios img {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px auto;
+        height: auto;
     }
 
+    /* mantener animación */
     .galeria-servicios img:hover {
-        transform: none !important; 
+        transform: scale(1.05);
+        transition: 0.3s;
     }
 
-    .seccion-mixta {
-        flex-direction: column; 
-        padding: 20px;          
-        gap: 20px;              
-        text-align: center;     
+    /* ================= HERO ================= */
+
+    .container {
+        padding: 60px 20px;
+        text-align: center;
     }
 
-    .texto-columna, .imagen-columna {
-        flex: none;             
-        width: 100%;            
+    .parrafo-container {
+        text-align: center;
+        font-size: 16px;
+        margin-top: 30px;
     }
 
-    .imagen-columna img {
-        max-width: 80%;        
-        margin: 0 auto;         
-    }
+    /* ================= CARRUSEL ================= */
 
-.h1-container{
-
-   text-align: center;
-   font-size: 18px; 
-
-}
-
-    .footer-container {
-        padding: 30px 10px;
-    }
-}
-
-.whatsapp-flotante {
-    position: fixed; 
-    bottom: 20px;    
-    right: 20px;     
-    width: 60px;     
-    height: 60px;   
-    background-color: #25D366; 
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.2); 
-    z-index: 1000;   
-    transition: transform 0.3s ease; 
-}
-
-.whatsapp-flotante img {
-    width: 150px;    
-    height: auto;
-}
-
-.whatsapp-flotante:hover {
-    transform: scale(1.1); 
-}
-.h1-depilacion {
-    
- margin-bottom: 25px;
-    font-size: 28px;
-     
-}
-@media (max-width: 768px) {
     .carousel-item img {
-        height: 250px;   
-        border-radius: 0 !important;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 15px;
     }
+
+    /* ================= WHATSAPP ================= */
+
+    .whatsapp-button img {
+        width: 70px;
+        height: 70px;
+    }
+
 }
-  h2 {
-    font-size: 24px;
-  }
-
-  h3 {
-    font-size: 18px;
-  }
-
-  p {
-    font-size: 15px;
-  }
-
-  section {
-    padding: auto 20px; 
-  }
-
-  #quienes-somos {
-    padding: 50px 15px;
-  }
-
-  #quienes-somos h1 {
-    font-size: 30px;
-  }
-
-  #quienes-somos h2 {
-    font-size: 22px;
-  }
-
-  #quienes-somos p {
-    font-size: 15px;
-  }
