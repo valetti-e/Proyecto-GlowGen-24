@@ -652,7 +652,7 @@ img {
     z-index: 9999;
 }
 
-/* evita que el menu tape contenido */
+
 body {
     padding-top: 80px;
 }
@@ -676,7 +676,7 @@ body {
     transition: 0.3s;
 }
 
-/* animación hamburguesa a X */
+
 #menu:checked + label .line1 {
     transform: rotate(45deg) translate(5px, 5px);
 }
@@ -774,3 +774,27 @@ body {
     }
 
 }
+
+.redes-sociales {
+        text-align: center;
+    }
+
+    .iconos {
+        justify-content: center; /* centra los íconos */
+        gap: 30px;               /* menos espacio en celular */
+        flex-wrap: wrap;         /* por si no entran */
+    }
+
+    .facebook-icon img,
+    .instagram-icon img,
+    .whatsapp-icon img {
+        width: 45px;  /* más chicos */
+    }
+
+    .instagram-icon img {
+        width: 50px;
+    }
+
+    .whatsapp-icon img {
+        width: 55px;
+    }
