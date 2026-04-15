@@ -235,23 +235,35 @@ button {
 
 .redes-sociales {
     text-align: center;
+   
 }
 
-.redes-sociales p {
-    font-family: 'Patrick Hand', cursive;
-    font-size: 22px;
-    margin-bottom: 10px;
-    color: #333;
+.iconos {
+    display: flex;
+    gap: 90px;
+   
 }
 
-.instagram-icon img {
-    width: 40px;               
+.facebook-icon img,
+.instagram-icon img,
+.whatsapp-icon img {
+    width: 60px;
     height: auto;
     transition: transform 0.3s ease;
 }
 
-.instagram-icon img:hover {
-    transform: translateY(-5px); /
+.instagram-icon img {
+    width: 65px;
+}
+
+.whatsapp-icon img {
+    width: 70px;
+}
+
+.facebook-icon img:hover,
+.instagram-icon img:hover,
+.whatsapp-icon img:hover {
+    transform: translateY(-5px);
 }
 
 .copyright {
